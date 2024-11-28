@@ -1,0 +1,5 @@
+@import "../../styles/mixins";
+
+.appContainer {
+  @include content-padding-inline;
+}

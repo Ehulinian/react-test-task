@@ -1,0 +1,73 @@
+.mealCard {
+  border: 1px solid #645b5b;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+  padding-bottom: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mealCard:hover {
+  transform: scale(1.05);
+}
+
+.mealImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.mealInfo {
+  padding: 15px;
+}
+
+.mealTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.mealCategory,
+.mealOrigin {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.favoriteButton {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  width: 90%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: #e55347;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    background-color: #e55347;
+    transform: scale(1);
+  }
+
+  &:disabled {
+    background-color: #e55347;
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled):hover {
+    background-color: #e55347;
+  }
+}

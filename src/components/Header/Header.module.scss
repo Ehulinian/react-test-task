@@ -1,0 +1,57 @@
+@import "../../styles/mixins";
+
+.header {
+  @include page-grid;
+  position: relative;
+  border-bottom: 1px solid $border-header-color;
+  z-index: 1001;
+  background: rgb(15, 17, 33, 0.9);
+}
+
+.nav {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+}
+
+.headerNavLink {
+  color: $gray-secondary;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 11px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: $main-white-color;
+  }
+
+  &.active {
+    position: relative;
+    color: $main-white-color;
+  }
+
+  &.active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: rgba(241, 242, 249, 1);
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include on-phone {
+      display: none;
+    }
+
+    @include on-tablet {
+      bottom: -18.5px;
+    }
+
+    @include on-desktop {
+      bottom: -16.5px;
+    }
+  }
+}

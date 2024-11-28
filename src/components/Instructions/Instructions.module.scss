@@ -1,0 +1,27 @@
+.instructions {
+  padding: 20px;
+  background-color: #181717;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.instructions__title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.instructions__meal {
+  margin-bottom: 20px;
+}
+
+.instructions__meal h3 {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.instructions__meal:last-child {
+  margin-bottom: 0;
+}
